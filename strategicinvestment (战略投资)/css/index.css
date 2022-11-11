@@ -1,0 +1,1143 @@
+*{margin: 0;padding: 0;}
+ul li{list-style: none;}
+a{text-decoration: none;color: #333;}
+em, i {  font-style: normal;}
+.clearfix:after{
+	content:'';
+	display: block;
+	clear:both;
+}
+html{
+	overflow-x: hidden;
+}
+.limibody{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+body{
+	position: relative;	
+	width: 100%;
+	height: 100%;
+}
+/* 头部 */
+header{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: url(../images/opacity-90.png);
+	box-sizing: border-box;
+	z-index: 10;
+}
+#header-warp{
+	height: 100px;
+	transition: all 0.4s ease ;
+}
+.header-div{
+	width: 1200px;
+	margin: 0 auto;
+}
+/* 头部图标 */
+.head-logo{
+	width: 212px;
+	padding-top: 23px;
+	display: block;
+	float: left;
+	transition: all 0.4s ease ;
+}
+.head-logo img{
+	width: 100%;
+	display: block;
+}
+/* 头部导航 */
+.head-nav{
+	float: right;
+	height: 100px;
+	line-height: 100px;
+	transition: all .4s ease;
+}
+.head-nav .active a{
+	color: #0077c0;
+}
+.head-nav li{
+	position: relative;
+	float: left;
+	padding: 0 25px;
+}
+.head-nav li:hover>a{
+	color: #0077c0;
+}
+.head-nav li>a{
+	display: block;
+	color: #444444;
+	font-size: 16px;
+}
+.head-nav li:hover>a b{
+	width: 100%;
+}
+.head-nav li a b{
+	display: block;
+	position: relative;
+	top: -2px;
+	width: 0px;
+	margin: 0 auto;
+	border-bottom: 2px solid #0280bb;
+	transition: all .3s ease-in-out;
+}
+.posi{
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 114px;
+	margin-left: -57px;
+}
+.posi2{
+	width: 200px;
+	margin-left: -100px;
+}
+.posi i{
+	display: block;
+	margin: 0 auto;
+	width: 12px;
+	height: 9px;
+	background: url(../images/second-nav.png)no-repeat center center/cover;
+}
+.posi .posi-div{
+	padding: 10px 15px;
+	border-radius: 10px;
+	background-color: rgba(0,0,0,.6);
+}
+.posi-div a:hover{
+	text-decoration: underline;
+}
+.posi .posi-div a{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+}
+/* 头部图组 */
+.head-itool{
+	float: right;
+	padding-top: 28px;
+	transition: all .4s;
+}
+.head-itool li{
+	float: left;
+	width: 38px;
+	height: 38px;
+	border: 1px solid #444444;
+	margin-left: 20px;
+	line-height: 38px;
+	border-radius: 50%;
+	overflow: hidden;
+	text-align: center;
+	font-size: 15px;
+	user-select: none;
+	cursor: pointer;
+	transition: all .2s ;
+}
+.head-itool li:hover{
+	border-color:	#0077c0;
+}
+.head-itool .search-li:hover{
+	background: url(../images/icon-search2.png)no-repeat center center/24px;
+}
+.head-itool .search-li{
+	background: url(../images/icon-search.png) no-repeat center center/24px;
+}
+.head-itool .icon-li:hover{
+	background: url(../images/icon-li2.png)no-repeat center center/24px;
+}
+.head-itool .icon-li{
+	background: url(../images/icon-li.png) no-repeat center center/24px;
+}
+/* 小屏下的按钮/页面 */
+.icon-menu{
+	width: 30px;
+	height: 30px;
+	margin-top: 6px;
+	display: none;
+	float: right;
+	background: url(../images/icon-menu.png) no-repeat center center/80%;
+}
+.icon-menu-close{
+	width: 30px;
+	height: 30px;
+	margin-top: 6px;
+	display: none;
+	float: right;
+	background: url(../images/icon-menu-close.png)no-repeat center center/100%;
+}
+.menu-list-warp{
+	width: 100%;
+	position: absolute;
+	top: 54px;
+	height: 888px;
+	background: rgba(0,0,0,.8);
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 99;
+}
+.menu-list{
+	position: absolute;
+	top: 54px;
+	left: 0;
+	overflow-y: scroll;
+	width: 100%;
+	visibility: hidden;
+	display: none;
+	z-index: 100;
+}
+.menu-list ul li{
+	position: relative;
+	background: #006fb0;
+	line-height: 49px;
+	padding: 0 18px;
+	border-bottom: 1px solid #0082d0;
+	opacity: 0;
+	transform: translate3d(0, -80px, 0);
+	transition: all 0.5s;
+}
+.menu-list ul li:first-child{
+	transition-delay: 0.05s;
+}
+.menu-list ul li:nth-child(2){
+	transition-delay: 0.1s;
+}
+.menu-list ul li:nth-child(3){
+	transition-delay: 0.15s;
+}
+.menu-list ul li:nth-child(4){
+	transition-delay: 0.2s;
+}
+.menu-list ul li a{
+	width: 85%;
+	display: block;
+	color: #fff;
+}
+.menu-list ul li .menuson{
+	margin-left: 20px;
+	height: 0px;
+	overflow: hidden;
+}
+.menu-list ul li .menuson a{
+	display: block;
+	line-height: 43px;
+	font-size: 16px;
+}
+.menu-list ul li .menuson a:hover{
+	color: orangered;
+}
+.menu-list ul li .arrow{
+	position: absolute;
+	top: 20px;
+	right: 16px;
+	display: block;
+	width: 18px;
+	height: 17px;
+	cursor: pointer;
+	background: url(../images/icon-sq.png)no-repeat center center/100%;
+	transition: all .5s ease;
+}
+/* 隐藏菜单栏 */
+.side-warp{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: url(../images/opacity-30.png);
+	z-index: -1;
+	opacity: 0;
+	transition: all .5s ease;
+}
+.side{
+	position: fixed;
+	right: -600px;
+	top: 0;
+	z-index: 101;
+	width: 600px;
+	background-color: #fff;
+	box-shadow: 0 5px 14px 3px #f2f2f2 inset;
+	height: 100%;
+}
+.side .side-top{
+	height: 101px;
+	border-bottom: 1px solid #dedede;
+	padding: 42px 42px 0px 42px;
+	box-sizing: border-box;
+}
+.side .side-top span{
+	font-size: 16px;
+	color: #444444;
+}
+.side .side-top i{
+	display: block;
+	float: right;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+	background: url(../images/icon-close.png)no-repeat center center/cover;
+}
+.side-bottom{
+	padding: 38px 0px 0px 70px;
+}
+.side-bottom .w200{
+	width: 200px;
+}
+.side-bottom .w160{
+	width: 160px;
+}
+.side-bottom ul{
+	float: left;
+	width: 140px;
+	height: 158px;
+	margin-bottom: 50px;
+}
+.side-bottom ul .side-bottom-li1{
+	    line-height: 16px;
+	    font-size: 15px;
+	    font-weight: bold;
+		color: #000;
+		padding-left: 10px;
+		margin-bottom: 20px;
+		margin-left: -12px;
+		border-left: 2px solid #0077c0;
+}
+.side-bottom ul li a:hover{
+	color: #0077c0;
+}
+.side-bottom ul li a{
+	display: block;
+	line-height: 25px;
+	font-size: 14px;
+	color: #707070;
+}
+/* 头部下的大图 */
+.carousel{
+	position: relative;
+}
+.carousel img{
+	width: 100%;
+	display: block;
+}
+.carousel-div{
+	width: 1200px;
+	margin: 0 auto;
+}
+.carousel-div2{
+	position: absolute;
+	top: 88px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 1200px;
+	height: 99px;
+}
+.carousel-div2 h2{
+	font-size: 40px;
+	color: #fff;
+	line-height: 58px;
+	margin-bottom: 4px;
+	letter-spacing: 10px;
+	text-shadow: 0 0 8px rgb(0 0 0 / 80%);
+}
+.carousel-div2 p{
+	color: #fff;
+	font-size: 18px;
+	line-height: 32px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	text-shadow: 0 0 8px rgb(0 0 0 / 80%);
+}
+/* 投资策略 */
+.tactics{
+	position: relative;
+	margin-top: 35px;
+}
+.tactics-l{
+	float: left;
+	width: 50%;
+}
+.tactics-l img{
+	display: block;
+	width: 100%;
+}
+.tactics-r{
+	float: right;
+	width: 50%;
+	box-sizing: border-box;	
+	padding: 130px 230px 0px 110px;
+}
+.tactics-tit h2{
+	height: 32px;
+	margin-bottom: 10px;
+	line-height: 32px;
+	font-size: 30px;
+}
+.tactics-tit h3{
+	margin-bottom: 40px;
+	line-height: 24px;
+	font-size: 24px;
+	color: #0077c0;
+}
+.tactics-r p{
+	line-height: 32px;
+	font-size: 16px;
+}
+/* 投资方向 */
+.direction{
+	background-color: #f7faff !important;
+}
+.direction .tactics-div .tactics-r{
+	float: left;
+}
+.direction .tactics-div .tactics-l{
+	float: right;
+	z-index: -1;
+}
+.direction .tactics-div .tactics-r{
+	padding: 160px 82px 0 360px;
+}
+/* 投资优势 */
+	.advantage{
+		padding: 55px 0px 82px 0px;
+	}
+	.advantage-div{
+		width: 1200px;
+		margin:  0 auto;
+		overflow: hidden;
+		position: relative;
+	}
+	.advantage-swiper{
+		 margin-top: 56px;
+		    height: 400px;
+		position: relative;
+	}
+	.advantage-swiper .swiper-slide{
+		width: 300px;
+	}
+	.advantage-swiper .swiper-slide:hover{
+		background-color: #4792d9;
+	}
+	.advantage-swiper .swiper-slide:hover .advantage-t:before{
+		color: #91bee8;
+	}
+	.advantage-swiper .swiper-slide:hover .advantage-b:before{
+		color: #91bee8;
+	}
+	.advantage-swiper .swiper-slide:hover .advantage-t::after{
+		color: #91bee8;
+	}
+	.advantage-swiper .swiper-slide:hover .advantage-b::after{
+		color: #91bee8;
+	}
+	.advantage-swiper .swiper-slide:hover .advantage-slide p{
+		color: #fff;
+	}
+	.advantage-swiper .swiper-slide:hover .advantage-slide-icon i {
+		background-image: url(../images/icon-advantage2.png);
+	}
+	.advantage-swiper .swiper-slide:before{
+		content: '';
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		right: 20px;
+		bottom: 20px;
+		margin: auto;
+		width: auto;
+		height: auto;
+		border: 1px solid #fff;
+	}
+	.advantage-slide{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		width: 56%;
+		height: 164px;
+		text-align: center;
+	}
+	.advantage-slide p{
+		font-size: 16px;
+		color: #666;
+		line-height: 32px;
+	}
+	.advantage-slide-icon{
+		position: relative;
+		width: 74px;
+		height: 74px;
+		margin: 0 auto 25px;
+	}
+	.advantage-t ,.advantage-b{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 9px;
+	}
+	.advantage-t:before ,.advantage-b:before{
+		content: "+";
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    width: 9px;
+	    height: 9px;
+	    line-height: 9px;
+	    color: rgba(102,102,102,40);
+	    font-size: 12px;
+	}
+	.advantage-t::after ,.advantage-b::after{
+		content: "+";
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 9px;
+		height: 9px;
+		line-height: 9px;
+		color: rgba(102,102,102,40);
+		font-size: 12px;
+	}
+	.advantage-b{
+		top: auto;
+		bottom: 0;
+	}
+	.advantage-slide-icon i{
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		font-style: normal;
+		width: 46px;
+		height: 45px;
+		background: url(../images/icon-advantage.png)no-repeat ;
+	}
+	.advantage-slide-icon em{
+		position: absolute;
+		font-style: normal;
+		width: 32px;
+		height: 32px;
+		background: url(../images/advantage-orange.png)no-repeat center center;
+	}
+	.advantage-swiper .swiper-button-next,.advantage-swiper .swiper-button-prev{
+		position: absolute;
+		top: 50%;
+		margin-top: -22px;
+		width: 40px;
+		height: 40px;
+		background-color: #f4f4f4 !important;
+	}
+	.advantage-swiper .swiper-button-next::after, .advantage-swiper .swiper-button-prev::after{
+		content: "";
+	}
+	.advantage-swiper .swiper-button-next{
+		background: url(../images/icon-blue-r.png)no-repeat center center/60%;
+	}
+	.advantage-swiper .swiper-button-prev{
+		background: url(../images/icon-blue-l.png)no-repeat center center/60%;
+	}
+	.advantage-1 em{
+		top: 5px;
+		left: 5px;
+	}
+	.advantage-3 em{
+		bottom: 5px;
+		left: 5px;
+	}
+	.advantage-4 em{
+		bottom: 5px;
+		right: 5px;
+	}
+	.advantage-2 i{
+		background-position: -68px 0;
+	}
+	.advantage-3 i{
+		background-position: -140px 0;
+	}
+	.advantage-4 i{
+		background-position: -205px 0;
+	}
+	.brand{
+		position: relative;
+		margin: 55px auto 110px;
+	}
+	.next,.prev{
+		position: absolute;
+		top: 50%;
+		width: 40px;
+		height: 40px;
+		background-color: #f4f4f4 !important;
+	}
+	.next{
+		right: 0;
+		background: url(../images/icon-blue-r.png)no-repeat center center/60%;
+	}
+	.prev{
+		left: 0;
+		background: url(../images/icon-blue-l.png)no-repeat center center/60%;
+	}
+	
+/* 底部 */
+.footer{
+	padding: 64px 0px 10px 0px;
+	background-color: #f2f2f2;
+}
+.footer-div{
+	width: 1200px;
+	margin: 0 auto;
+}
+.footer-ul{
+	margin-bottom: 85px;
+}
+.footer-ul li{
+	float: left;
+	width: 226px;
+}
+.footer-ul li:last-of-type{
+	width: 70px;
+}
+.footer-ul li>a{
+	display: block;
+	height: 32px;
+	margin-bottom: 10px;
+	line-height: 32px;
+	font-size: 16px;
+	color: #333;
+}
+.footer-ul li>div{
+	width: 226px;
+}
+.footer-ul li div a{
+	display: block;
+	height: 28px;
+	line-height: 28px;
+	padding-right: 10px;
+	font-size: 14px;
+	overflow: hidden;
+	color: #666;
+}
+.footer-foot{
+	height: 58px;
+	border-top: 1px solid #dfdfdf;
+	line-height: 58px;
+	font-size: 16px;
+	color: #999999;
+}
+.footer-l{
+	float: left;
+}
+.footer-l a{
+	padding: 0 10px;
+	color: #999999;
+	font-size: 14px;
+}
+.footer-r{
+	float: right;
+	margin-right: 20px;
+}
+.footer-r >a{
+	color: #666;
+	font-size: 14px;
+}
+.footer-r-div{
+	float:right;
+}
+.footer-r-div a{
+	position: relative;
+	display: inline-block;
+	width: 26px;
+    height: 21px;
+    margin-left: 20px;
+    background: url(../images/icon-wchat.png) no-repeat center center/cover;
+    vertical-align: middle;
+}
+.footer-r-div a:nth-child(2){
+    background: url(../images/icon-sina.png) no-repeat center center/cover;
+}
+.footer-r-div a:nth-child(3){
+    background: url(../images/icon-dy.png) no-repeat center center/cover;
+}
+.footer-r-div a:hover .footer-posi{
+	display: block;
+}
+.footer-posi{
+	display: none;
+	position: absolute;
+	top: -173px;
+	left: -70px;
+	z-index: 99;
+	width: 160px;
+    height: 160px;
+    box-shadow: 0 0 5px #ccc;
+	background: #fff;
+    border-radius: 5px;
+}
+.weixin{
+	display: block;
+	width: 110px;
+	margin: 6px auto 0px;
+}
+.footer-posi p{
+	padding: 0 6px;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+    line-height: 18px;
+}
+.footer-posi em{
+	position: absolute;
+	bottom: -12px;
+    left: 50%;
+    margin-left: -10px;
+	z-index: 999;
+	width: 0px;
+	height: 0px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 12px solid #fff;
+}
+/* 回到顶部 */
+.gotop{
+	display: none;
+	position: fixed;
+	right: 40px;
+    bottom: 90px;
+	width: 80px;
+	height: 80px;
+	background:#f4f4f4 url(../images/icon-gotop.png)no-repeat center center/32px;
+	box-shadow: 0 5px 14px 3px rgb(0 0 0 / 18%);
+	z-index: 9;
+}
+/* 响应式 */
+@media screen and (max-width: 1550px){
+	/* 投资策略 */
+	.tactics-r{
+		padding: 80px 180px 0px 90px;
+	}
+	/* 投资方向 */
+	.direction .tactics-div .tactics-r{
+		padding: 80px 82px 0 210px;
+	}
+}
+@media screen and (max-width: 1400px){
+	/* 投资策略 */
+	.tactics-r{
+		padding: 50px 110px 0px 90px;
+	}
+	/* 投资方向 */
+	.direction .tactics-div .tactics-r{
+		padding: 90px 82px 0 140px;
+	}
+	/* 投资优势 */
+	.advantage-swiper .swiper-button-prev{
+		left: 0;
+	}
+	.advantage-swiper .swiper-button-next{
+		right: 0;
+	}
+}
+@media screen and (max-width: 1220px){
+	/* 头部 */
+	.header-div{
+		width: 1000px;
+	}
+	.icon-li{
+		display: none;
+	}
+	.head-nav li{
+		padding: 0 15px;
+	}
+	.icon-menu-close{
+		display: none;
+	}
+	.icon-menu{
+		display: none;
+	}
+	.menu-list-warp{
+		display: none;
+	}
+	.menu-list{
+		display: none;
+	}
+	/* 头部下的大图 */
+	.carousel-div {
+	    width: 1000px;
+	}
+	.carousel-div2{
+		width: 1000px;
+	}
+	/* 投资策略 */
+	.tactics-r{
+		padding: 20px 100px 0px 50px;
+	}
+	/* 投资方向 */
+	.direction .tactics-div .tactics-r{
+		padding: 60px 50px 0 150px;
+	}
+	/* 投资优势 */
+		.advantage-div{
+			width: 1000px;
+		}
+		
+	
+	
+	
+	/* 底部 */
+		.footer-div{
+			width: 1000px;
+		}
+		.footer-ul{
+			margin-bottom: 60px;
+		}
+		.footer-ul li{
+			width: 186px;
+		}
+}
+
+@media screen and (max-width:1055px){
+	/* 投资策略 */
+	.tactics-r{
+		padding: 20px 50px 0px 50px;
+	}
+	.tactics-tit h3{
+		margin-bottom: 25px;
+	}
+	/* 投资方向 */
+	.direction .tactics-div .tactics-r{
+		padding: 60px 50px 0 100px;
+	}
+}
+@media screen and (max-width:1024px){
+	/* 头部 */
+	.header-div{
+		width: 800px;
+	}
+	.head-logo{
+		margin-right: 100px;
+	}
+	.head-itool{
+		display: none;
+	}
+	.head-nav li{
+		padding: 0 10px;
+	}
+	.icon-menu-close{
+		display: none;
+	}
+	.icon-menu{
+		display: none;
+	}
+	.menu-list-warp{
+		display: none;
+	}
+	.menu-list{
+		display: none;
+	}
+	.swiper-container{
+		min-width: 800px;
+	}
+	/* 头部下的大图 */
+	.carousel-div {
+	    width: 800px;
+	}
+	.carousel-div2{
+		width: 800px;
+	}
+	/* 投资策略 */
+	.tactics-r p{
+		max-height: 144px;
+		overflow: hidden;
+	}
+	/* 投资优势 */
+		.advantage-div{
+			width: 800px;
+		}
+	
+	
+	
+	
+	/* 底部 */
+	.footer-div{
+		width: 800px;
+	}
+	.footer-ul li{
+		width: 146px;
+	}
+	.footer-foot{
+		height: auto;
+		line-height: 45px;
+	}
+	.footer-l {
+		float: none;
+		display: block;
+		text-align: center;
+	}
+	.footer-r {
+		float: none;
+		display: block;
+		text-align: center;
+	}
+	.footer-r-div {
+	    float: none;
+	}
+	/* 回到顶部 */
+	.gotop{
+		width: 70px;
+		height: 70px;
+	}
+}
+
+
+@media screen and (max-width: 980px){
+	/* 投资策略 */
+	.tactics-div{
+		width: 800px;
+		position: relative;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.tactics-l{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.tactics-l img{
+		height: 120%;
+	}
+	.tactics-r{
+		float: left;
+		padding: 40px 50px 50px 50px;
+		background-color: rgba(255,255,255,.8);
+	}
+	.tactics-tit h3{
+		margin-bottom: 20px;
+		font-size: 22px;
+	}
+	.tactics-r p{
+		max-height: 118px;
+	}
+	/* 投资方向 */
+	.direction{
+		background-color: transparent !important;
+	}
+	.direction .tactics-div .tactics-r{
+		float: right;
+		padding: 60px 50px 50px 50px;
+	}
+	/* 投资优势 */
+		.advantage-div{
+			width: 800px;
+		}
+	/* 底部 */
+	.footer-div{
+		width: 800px;
+	}
+}
+@media screen and (max-width: 860px){
+	/* 头部 */
+	#header-warp{
+		height: 54px !important;
+		padding: 8px 0px !important;
+	}
+	.header-div{
+		width: 100%;
+		    padding: 0 10px;
+		    box-sizing: border-box;
+	}
+	.head-logo{
+		width: 170px !important;
+		    height: 39px;
+		    margin-right: 0;
+		    padding-top: 0!important;
+	}
+	.head-nav{
+		display: none;
+	}
+	.icon-menu-close{
+		display: block;
+	}
+	.icon-menu{
+		display: block;
+	}
+	.menu-list-warp{
+		display: block;
+	}
+	.menu-list{
+		display: block;
+	}
+	.swiper-container{
+		min-width: 100%;
+	}
+	/* 头部下的大图 */
+	.carousel-div {
+	    width: 100%;
+		padding: 0 10px;
+		box-sizing: border-box;
+	}
+	.carousel-div2{
+		width: 100%;
+		padding: 0 10px;
+		box-sizing: border-box;
+	}
+	
+	/* 投资策略 */
+	.tactics-div{
+		width: 100%;
+	}
+	.tactics-r{
+		padding: 40px 35px 50px 35px;
+	}
+	/* 投资方向 */
+	.direction .tactics-div .tactics-r{
+		padding: 60px 35px 50px 35px;
+	}
+	/* 投资优势 */
+		.advantage-div{
+			width: 100%;
+			padding: 0 10px;
+			box-sizing: border-box;
+		}
+		
+	
+	
+	/* 底部 */
+	.footer{
+		padding: 10px 0px 10px;
+	}
+	.footer-div{
+		width: 100%;
+		padding: 0px 10px;
+		box-sizing: border-box;
+	}
+	.footer-ul{
+		display: none;
+	}
+	.footer-foot{
+		border-top: 0;
+	}
+}
+@media screen and (max-width: 768px){
+	/* 头部下的大图 */
+	.carousel-div2{
+		top: 70px;
+	}
+	.carousel-div2 h2{
+		height: 45px;
+		line-height: 45px;
+		font-size: 28px;
+	}
+	.carousel-div2 p{
+		font-size: 16px;
+		letter-spacing: 2px;
+	}
+	
+	/* 投资策略 */
+	.tactics-r{
+		padding: 40px 35px 40px 35px;
+	}
+	.tactics-r p{
+		max-height: 94px;
+	}
+	/* 投资方向 */
+	.direction .tactics-div .tactics-r{
+		padding: 45px 35px 40px 35px;
+	}
+	
+	
+	/* 回到顶部 */
+	.gotop{
+		width: 70px;
+		height: 70px;
+	}
+}
+@media screen and (max-width: 600px){
+	/* 投资策略 */
+	.tactics-r{
+		width: 100%;
+		padding: 30px 15px 30px 15px;
+	}
+	.tactics-r p{
+		max-height: inherit;
+	}
+	/* 投资方向 */
+	.direction .tactics-div .tactics-r{
+		padding: 45px 15px 40px 15px;
+	}
+	/* 投资优势 */
+	.swiper-slide{
+		background-color: #4792d9;
+	}
+	.advantage-t:before{
+		color: #91bee8;
+	}
+	.advantage-b:before{
+		color: #91bee8;
+	}
+	.advantage-t::after{
+		color: #91bee8;
+	}
+	.advantage-b::after{
+		color: #91bee8;
+	}
+	.advantage-slide p{
+		color: #fff;
+	}
+	.advantage-slide-icon i {
+		background-image: url(../images/icon-advantage2.png);
+	}
+	
+	
+	/* 回到顶部 */
+	.gotop{
+		width: 60px;
+		height: 60px;
+	}
+}
+@media screen and (max-width: 560px){
+	/* 头部下的大图 */
+	.carousel img{
+		margin-top: 54px;
+	}
+	.carousel-div2{
+		top: 12px;
+	}
+	
+	
+	/* 回到顶部 */
+	.gotop{
+		width: 50px;
+		height: 50px;
+		background-size: 26px;
+	}
+}
+@media screen and (max-width: 480px){
+
+	/* 底部 */
+	.footer-l{
+		display: none;
+	}
+	.footer-r>a{
+		display: none;
+	}
+	/* 回到顶部 */
+	.gotop{
+		width: 45px;
+		height: 45px;
+	}
+}
